@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <label><b>IP Address: </b></label> {{imconfig.ip}}
+    </div>
+    <div class="col-sm">
+      <label><b>HostName: </b></label> {{imconfig.hostname}}
+    </div>
+    <div class="col-sm">
+      <label><b>OS: </b></label> {{imconfig.os}} ({{imconfig.arch}})
+    </div>
+  </div>
+</div>
+<hr />
+<div *ngIf="imconfig">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <label><b>Free Physical Memory Size: </b></label> {{imconfig.freePhysicalMemorySize}}
+      </div>
+      <div class="col-sm">
+        <label><b>Free Swap Space Size: </b></label> {{imconfig.freeSwapSpaceSize}}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm">
+        <label><b>System Cpu Load: </b></label> {{imconfig.systemCpuLoad}}
+      </div>
+      <div class="col-sm">
+        <label><b>Total Physical Memory Size: </b></label> {{imconfig.totalPhysicalMemorySize}}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm">
+        <label><b>Total Swap Space Size: </b></label> {{imconfig.totalSwapSpaceSize}}
+      </div>
+      <div class="col-sm">
+        <label><b>Process Cpu Load: </b></label> {{imconfig.processCpuLoad}}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm">
+        <label><b>Available Processors: </b></label> {{imconfig.availableProcessors}}
+      </div>
+      <div class="col-sm">
+        <label><b>System Load Average: </b></label> {{imconfig.systemLoadAverage}}
+      </div>
+    </div>
+    <label><b>Feature(s): </b> </label>
+    <div class="row">
+      
+      <div class="col-sm">
+        <ul>
+          <ol  *ngFor="let f of imconfig.feature"> {{f.name}} - {{f.status}}</ol>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<br>

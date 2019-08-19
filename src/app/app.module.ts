@@ -8,19 +8,23 @@ import { CreateContactComponent } from './create-contact/create-contact.componen
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DataTablesModule } from 'angular-datatables';
+import { ImconfigDetailsComponent } from './imconfig-details/imconfig-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateContactComponent,
     ContactDetailComponent,
-    ContactListComponent
+    ContactListComponent,
+    ImconfigDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

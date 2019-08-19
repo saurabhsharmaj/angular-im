@@ -5,12 +5,19 @@ import { ContactDetailComponent } from './contact-detail/contact-detail.componen
 import { CreateContactComponent } from './create-contact/create-contact.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 
+import { ImconfigDetailsComponent } from './imconfig-details/imconfig-details.component';
+
+
 
 const routes: Routes = [
-  { path: '', redirectTo: 'contact', pathMatch: 'full' },
+  { path: '', redirectTo: 'imconfigs', pathMatch: 'full' },
   { path: 'contacts', component: ContactListComponent },
   { path: 'add', component: CreateContactComponent },
-  { path: 'details/:id', component: ContactDetailComponent }
+  { path: 'details/:id', component: ContactDetailComponent },
+
+
+  { path: 'imconfigs', component: ImconfigDetailsComponent }
+
 ];
 
 @NgModule({
